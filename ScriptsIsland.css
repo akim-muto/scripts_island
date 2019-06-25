@@ -40,6 +40,12 @@ img {
     text-align: center;
     }
 
+.Navi ul{
+    margin-left: 0;
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
 .Navi ul li a img{
     max-width:130px;
     margin:2px;
