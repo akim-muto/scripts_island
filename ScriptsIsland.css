@@ -10,12 +10,13 @@ body{
 p{
     margin-top: 3px;
     margin-bottom: 3px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 1px;
+    margin-right: 1px;
+    font-size: 110%;
 }
 
 h2{
-    font-size: 160%;
+    font-size: 130%;
     margin: 1px;
 }
 
@@ -24,9 +25,9 @@ h2{
 }
 
 h3{
-    font-size: 140%;
+    font-size: 120%;
     font-weight: normal;
-    margin: 3px;
+    margin: 1px;
 }
 
 img {
@@ -44,14 +45,14 @@ img {
     margin:2px;
 }
 
-.Navi ul li.logo{
+.Navi ul li{
     list-style-type: none;
 }
 
 .main{
     margin: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 1px;
+    margin-right: 1px;
     border-top: 1px solid black;
 }
 
