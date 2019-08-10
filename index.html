@@ -13,30 +13,70 @@
     <div class="all">
         <div class="header">
             <img src="image/header.png" alt="header">
+        </div>
+        <div class="lang">
+            <p>Lnaguage:→<a href="index_en.html">English</a></p>
         </div>   
         <div class="Navi">
             <ul>
                 <li><h2>Blender scripts:Download&amp;Install</h2></li>
                 <li class="logo"><a href="http://www.blender.org"><img src="image/blender.png" alt="blender.org"></a></li>
                 <ul>
-                    <li><h3>Separation</h3></li>
-                    <li><h3>Pivot cahnge</h3></li>
+                    <li><h3><a href="index.html#title_separation">Separation</a></h3></li>
+                    <li><h3><a href="index.html#title_pivot_change">Pivot change</a></h3></li>
                 </ul>
             </ul>
         </div>
         <div class="main">
-            <h2 class="title">Blender scripts:Download&amp;Install</h2>
-            <p>　Blenderの便利なアドオンスクリプトをダウンロードできます。<br>
-　どのような機能が実装されているかは個別の説明を参照してください。</p>
-            <h3>・Download</h3>
-            <p>　<a href="https://github.com/akim-muto/blender_scripts/releases/download/v1.0/blender_scripts.zip">Blender_scripts.zip</a></p>
-            <h3>・Getting a Git Repository</h3>
-            <p>　※何のことかわからない人は読み飛ばして問題ありません。<br>
-　Git Repositoryを取得したい人は、Gitをセットアップしているならシェルで任意のディレクトリに移動し以下を実行する。<br>
-　セットアップしていない場合は<a href="https://git-scm.com/">ここ</a>でGitが入手できる。
-            </p>
-            <pre class="prettyprint">$ git clone https://github.com/akim-muto/blender_scripts.git</pre>
-            <p></p>
+            <div class="content">
+                <h2 class="title">Blender scripts:Download&amp;Install</h2>
+                <p>　Blenderの便利なアドオンスクリプトをダウンロードできます。<br>
+                    　どのような機能が実装されているかは個別の説明を参照してください。</p>
+                <h3>・Download</h3>
+                <p>　<a href="https://github.com/akim-muto/blender_scripts/releases/download/v1.0/blender_scripts.zip">Blender_scripts.zip</a></p>
+                <h3>・Getting a Git Repository</h3>
+                <p>　※何のことかわからない人は読み飛ばして問題ありません。<br>
+                    　Git Repositoryを取得したい人は、Gitをセットアップしているならシェルで任意のディレクトリに移動し以下を実行します。<br>
+                    　セットアップしていない場合は<a href="https://git-scm.com/">ここ</a>でGitが入手できます。
+                </p>
+                <pre class="prettyprint">$ git clone https://github.com/akim-muto/blender_scripts.git</pre>
+            </div>
+            <div class="content">
+                <h2 class="title" id="title_separation">Separation</h2>
+                <p>　ノードエディター上に配置され設定されたテクスチャのファイル名から固定文字を識別し、ベースカラー、メタリック、ラフネス、ノーマルなど種類別にレンダリングします。</p>
+                <img class="sample" src="image/Col.png"><img class="sample" src="image/Met.png"><img class="sample" src="image/Nml.png"><img class="sample" src="image/Rough.png">
+                <h3>・マニュアル</h3>
+                <p>※以下Separationの説明には<a href="https://twitter.com/Trypticon_fps">Trypticonでありカーバンクルさん</a>より提供していただいたRavenのデータを用いて説明させてもらいます。</p>
+                <h4>1.Separationのメニュー</h4>
+                <p>　Separationのメニューはインストールが完了している場合、Renderパネルにあります。</p>
+                <h4>2.固定文字の設定</h4>
+                <p>　Separationはレンダリングする際にテクスチャファイルのファイル名中の固定文字を識別し、利用します。<br>
+                    　そのためテクスチャファイルにベースカラーやメタリックなどの種類ごとに、あらかじめ固有の固定文字を含めておく必要があります。<br>
+                    　レンダリングする以前にSeparationに使用したい種類のテクスチャファイルの固定文字を指定します。target stringとラベルが張られたテキストボックスに指定したい固定文字を入力し、テキストボックス隣の＋のアイコンをクリックするとリストに固定文字が追加されます。レンダリングしたいすべての種類のテクスチャファイルの固定文字を追加する必要があります。
+                </p>
+                <img class="separation" src="image/separation1.png">
+                <img class="separation" src="image/separation2.png">
+                <h4>3.出力ディレクトリの指定</h4>
+                <p>　レンダリングした際の出力先を指定します。デフォルトでは"C:\blender\"となっています。<br>
+                    　directoryトラベルの張られたテキストボックスの隣のアイコンをクリックするとファイルブラウザが開くので、指定したいディレクトリを開いてopen browserを押します。<br>
+                    　なおファイル名があらかじめ入力されている場合がありますので、その際はファイル名を消去してディレクトリのみの状態にしてください。
+                </p>
+                <h4>4.レンダリング</h4>
+                <p>　アニメーションをレンダリングする場合はRender animationのラベルが張られたチェックボックスにチェックをいれます。<br>
+                    　アニメーションかどうかの選択が終わったらseparationというコマンドボタンを押すとレンダリングが開始されます。
+                </p>
+                <h4>5.注意事項</h4>
+                <p>　コンポジットを設定している場合、正常にレンダリングされない場合があります。CompositorでUse Nodeのチェックを外すとうまくいく場合があります。</p>
+            </div>
+            <div class="content">
+                <h2 class="title" id="title_pivot_change">Pivot change</h2>
+                <p>　編集モードで選択した頂点を、オブジェクトモードへ変更した上でピボットポイントに変更します。</p>
+                <h3>・マニュアル</h3>
+                <p>　編集モードに変更し、頂点選択モードで頂点を一つだけ選択します。キーボードでキー[d]を入力するとオブジェクトモードに変更し、選択していた頂点の位置にピボットポイントが来ます</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>© 2019 <a href="https://twitter.com/akim_muto">Akim Muto</a></p>
         </div>
     </div>
 </body>

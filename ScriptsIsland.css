@@ -24,7 +24,7 @@ h2{
     margin-top: 15px
 }
 
-h3{
+h3,h4{
     font-size: 120%;
     font-weight: normal;
     margin: 1px;
@@ -40,6 +40,12 @@ img {
     text-align: center;
     }
 
+.lang{
+    text-align: right;
+    margin:0px;
+    padding:0px;
+}
+
 .Navi ul{
     margin-left: 0;
     padding-left: 1em;
@@ -48,7 +54,7 @@ img {
 
 .Navi ul li a img{
     max-width:130px;
-    margin:2px;
+    margin:1px;
 }
 
 .Navi ul li{
@@ -64,4 +70,27 @@ img {
 
 pre{
     margin-left: 15px;
+}
+
+.content{
+    margin-bottom:25px;
+}
+
+.sample{
+    width:50%;
+    max-width: 512px;
+    height: auto;
+    margin-bottom:25px;
+}
+
+.separation{
+    width:100%;
+    max-width: 512px;
+    height: auto;
+    margin-bottom:25px;
+}
+
+.footer{
+    text-align: right;
+    border-top: 1px solid black;
 }
