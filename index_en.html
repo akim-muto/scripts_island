@@ -13,37 +13,72 @@
     <div class="all">
         <div class="header">
             <img src="image/header.png" alt="header">
+        </div>
+        <div class="lang">
+            <p>Lnaguage:→<a href="index.html">Japanese</a></p>
         </div>   
         <div class="Navi">
             <ul>
                 <li><h2>Blender scripts:Download&amp;Install</h2></li>
                 <li class="logo"><a href="http://www.blender.org"><img src="image/blender.png" alt="blender.org"></a></li>
                 <ul>
-                    <li><h3>Separation</h3></li>
-                    <li><h3>Pivot cahnge</h3></li>
+                    <li><h3><a href="index.html#title_separation">Separation</a></h3></li>
+                    <li><h3><a href="index.html#title_pivot_change">Pivot change</a></h3></li>
                 </ul>
             </ul>
         </div>
         <div class="main">
-            <div class="content1">
+            <div class="content">
                 <h2 class="title">Blender scripts:Download&amp;Install</h2>
-                <p>　Blenderの便利なアドオンスクリプトをダウンロードできます。<br>
-どのような機能が実装されているかは個別の説明を参照してください。</p>
+                <p>You can download Blender scripts.<br>
+                If you want know implementation feature, please refer to each description</p>
                 <h3>・Download</h3>
                 <p>　<a href="https://github.com/akim-muto/blender_scripts/releases/download/v1.0/blender_scripts.zip">Blender_scripts.zip</a></p>
                 <h3>・Getting a Git Repository</h3>
-                <p>If you don't know what this is about, you can skip the following steps.<br>
-Git Repositoryを取得したい人は、Gitをセットアップしているならシェルで任意のディレクトリに移動し以下を実行する。<br>
-セットアップしていない場合は<a href="https://git-scm.com/">ここ</a>でGitが入手できる。
+                <p>※If you don't know what this is about, you can skip the following steps.<br>
+                If you want Git Repository, if you have already set up Git, move directory of your choice in shell, and run the following command.<br>
+                If you have not set up Git, you can get Git from <a href="https://git-scm.com/">this</a>.
                 </p>
                 <pre class="prettyprint">$ git clone https://github.com/akim-muto/blender_scripts.git</pre>
+                <h3>・Install</h3>
+                <p>Start Blender, next select Edit→Preferences→Add-ons→Install, you want install .py file selected on file browser to push 'Install Add-on from File'.</p>
             </div>
-            <div class="content2">
-                <h2 class="title">Separation</h2>
-                <p>ノードエディター上に配置され設定されたテクスチャのファイル名から固定文字を識別し、ベースカラー、メタリック、ラフネス、ノーマルなど種類別にレンダリングします。</p>
-                <p></p>
+            <div class="content">
+                <h2 class="title" id="title_separation">Separation</h2>
+                <p>This script identify fixed character in file name of placed texture on node editor to render base color,metalic,roughness,normal,etc.</p>
+                <p>※Data of Raven that used following description is provided from the <a href="https://twitter.com/Trypticon_fps">Trypticonでありカーバンクルさん</a>.</p>
+                <img class="sample" src="image/Col.png"><img class="sample" src="image/Met.png"><img class="sample" src="image/Nml.png"><img class="sample" src="image/Rough.png">
+                <h3>・Manual</h3>
+                <h4>1.Menu of Separation</h4>
+                <p>If it have already install, menu of Separation is in render panel.</p>
+                <h4>2.Set fixed character</h4>
+                <p>Separation identify and use fixed character that texturefile when rendering.<br>
+                Therefore, you need to include fixed characters in each type of texture file.<br>
+                Input fixed character on textbox affixed label "target string", and "+" on next to textbox click to added fixed character in list. Please add fixed character you want render each type of texture file.
+                </p>
+                <img class="separation" src="image/separation1.png">
+                <img class="separation" src="image/separation2.png">
+                <h4>3.Set output directory</h4>
+                <p>Set output directory when rendering. Default is "C:\blender\"<br>
+                Icon on next to affixed label "directory" click to open the filebrowser, and open you want setting directory. next click "open browser".<br>
+                If it have input file name, delete file name to only directory is.
+                </p>
+                <h4>4.Rendering</h4>
+                <p>If render animation, check checkbox affixed label "Render animation".<br>
+                Finally please click "separation".
+                </p>
+                <h4>5.Notes</h4>
+                <p>If you have set composite, There are cases where can't rendering. If Uncheck "Use Node" on compositor, There are cases where can rendering.</p>
             </div>
-            <p></p>
+            <div class="content">
+                <h2 class="title" id="title_pivot_change">Pivot change</h2>
+                <p>This script change select vertex on edit mode to pivot point on object mode.</p>
+                <h3>・Manual</h3>
+                <p>Change to edit mode, and select a vertex on vertex selection mode. next push [d] on keybord.</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>© 2019 <a href="https://twitter.com/akim_muto">Akim Muto</a></p>
         </div>
     </div>
 </body>
